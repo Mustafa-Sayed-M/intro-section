@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="any">
+
+  <title>Intro section</title>
+
+  <!-- Style Bootstrap File -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Style Css File -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Style Font Awesome File -->
+  <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+  <!-- Overlay -->
+  <div class="overlay"></div>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="images/logo.svg" alt="Logo">
+        </a>
+        <div class="links">
+          <button onclick="toggleMenu()" type="button" class="btn-close-menu">
+            <img src="images/icon-close-menu.svg" alt="Icon Close Menu">
+          </button>
+          <ul>
+            <li>
+              <span>Features</span>
+              <img src="images/icon-arrow-down.svg" alt="Arrow Icon">
+              <ul>
+                <li>
+                  <a href="#">
+                  <img src="images/icon-todo.svg" alt="">
+                  <span>Todo List</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/icon-calendar.svg" alt="">
+                  <span>Calender</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/icon-reminders.svg" alt="">
+                  <span>Reminders</span>
+                </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="images/icon-planning.svg" alt="">
+                    <span>Planing</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <span>Company</span>
+              <img src="images/icon-arrow-down.svg" alt="Arrow Icon">
+              <ul>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+          <div class="other-links">
+            <a href="#" class="login">Login</a>
+            <a href="#" class="register">Register</a>
+          </div>
+        </div>
+        <button onclick="toggleMenu()" type="button" class="btn-open-menu">
+          <img src="images/icon-menu.svg" alt="Icon Close Menu">
+        </button>
+      </div>
+    </nav>
+  </header>
+  <!-- Script Js File -->
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+/* Variables */
+:root {
+    /* ### Colors: */
+    /* Neutral */
+    --Almost-White: hsl(0, 0%, 98%);
+    --Medium-Gray: hsl(0, 0%, 41%);
+    --Almost-Black: hsl(0, 0%, 8%);
+    /* --------------------------------- */
+    /* ### Animations: */
+    /* # Transition */
+    --transition: ease-in-out 300ms;
+}
+/* GLobal Rules */
+a {
+    color: black !important;
+    text-decoration: none !important;
+}
+ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+p {
+    margin: 0 !important;
+}
+/* Body & Html */
+html,
+body {
+    min-height: 100vh;
+    position: relative;
+    font-size: 18px !important;
+    overflow-x: hidden !important;
+    font-family: 'Epilogue', sans-serif !important;
+}
+/* Overlay */
+.overlay {
+    top: 0;
+    right: 0;
+    z-index: -9;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .6);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+.overlay.active {
+    opacity: 1;
+    z-index: 9;
+}
+/* Header */
+header nav .container,
+header nav .container .links,
+header nav .container .links > ul {
+    display: flex;
+    align-items: center;
+}
+header nav .container,
+header nav .container .links {
+    flex-grow: 1;
+    justify-content: space-between;
+}
+header nav .container .links > ul > li {
+    cursor: pointer;
+    position: relative;
+}
+header nav .container ul li,
+header nav .container a {
+    color: var(--Medium-Gray) !important;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+header nav .container ul li:hover,
+header nav .container a:hover {
+    color: var(--Almost-Black) !important;
+}
+header nav .container .links > ul > li,
+header nav .container .links > ul > a {
+    padding: 15px 0;
+    margin-left: 35px;
+}
+header nav .container .links > ul > li ul {
+    left: 0;
+    top: 60px;
+    width: 160px;
+    position: absolute;
+    padding: 20px !important;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    /*display: none;
+    */-o-border-radius: 10px;
+    background-color: var(--Almost-White);
+    box-shadow: 0 0 20px -10px var(--Almost-Black);
+    transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+    -webkit-transition: var(--transition);
+    display: none;
+}
+header nav .container .links > ul > li:nth-of-type(1) ul {
+    margin-left: -70px !important;
+}
+header nav .container .links > ul > li ul li:not(:last-of-type) {
+    margin-bottom: 5px;
+}
+header nav .container .links > ul > li ul li a img {
+    margin-right: 5px;
+}
+header nav .container .links .other-links a {
+    padding: 10px 15px;
+}
+header nav .container .links .other-links a.register {
+    border: solid 2px var(--Medium-Gray);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+header nav .container .links .other-links a.register:hover {
+    border-color: var(--Almost-Black);
+}
+header nav .container button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+header nav .container button.btn-open-menu {
+    display: none;
+}
+header nav .container button.btn-close-menu {
+    display: none;
+}
+@media (max-width: 991px) {
+    header nav {
+        padding: 15px 0;
+    }
+    header nav .container .links {
+        top: 0;
+        width: 60%;
+        z-index: 10;
+        flex-grow: 0;
+        right: -100%;
+        height: 100vh;
+        padding-top: 50px;
+        position: absolute;
+        justify-content: start;
+        background-color: var(--Almost-White);
+        transition: var(--transition);
+        -webkit-transition: var(--transition);
+        -moz-transition: var(--transition);
+        -ms-transition: var(--transition);
+        -o-transition: var(--transition);
+}
+    header nav .container .links.active {
+        right: 0;
+    }
+    header nav .container .links button.btn-close-menu {
+        top: 15px;
+        right: 50px;
+        display: block;
+        position: absolute;
+    }
+    header nav .container .links,
+    header nav .container .links > ul {
+        flex-direction: column;
+    }
+    header nav .container .links > ul {
+        width: 100%;
+    }
+    header nav .container .links > ul > li,
+    header nav .container .links > ul > a {
+        margin-left: 0;
+    }
+    header nav .container .links .other-links a {
+        text-align: center;
+        display: block;
+    }
+    header nav .container button.btn-open-menu {
+        display: block;
+    }
+}
